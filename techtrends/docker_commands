@@ -1,0 +1,69 @@
+## CD into the techtrends directory 
+
+## Docker Login
+
+docker login
+
+## Commands used to build the application
+
+docker build -t techtrends .
+
+
+## commands to test and run the application 
+
+docker run -dp 7111:3111 techtrends
+
+## Docker run output 
+
+75e47d1f51676cf8cf543480a669b2b5036330b68ff54dd15f7c8f91526f762c
+
+## Docker command to retrieve the logs 
+
+docker logs 75e47d1f51676cf8cf543480a669b2b5036330b68ff54dd15f7c8f91526f762c
+
+## TechTrends logs
+
+* Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:01:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:01:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:01:48] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:01:48] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:01:48] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:01:48] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:01:52] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:01:52] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:01:52] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:01:52] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:Sat Nov 19 23:02:01 2022, Post "docker" created.
+DEBUG:app:Sat Nov 19 23:02:01 2022, Post "docker" created.
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:02:01] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:02:01] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:02:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:02:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:02:01] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:02:01] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:Sat Nov 19 23:02:03 2022, Post "docker" was retrieved.
+DEBUG:app:Sat Nov 19 23:02:03 2022, Post "docker" was retrieved.
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:02:03] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:02:03] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:02:03] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [19/Nov/2022 23:02:03] "GET /static/css/main.css HTTP/1.1" 304 -
+
+
+## DOcker command to tag the image 
+
+docker tag techtrends wzhiye/techtrends:v1.0.0
+
+## Docker command to push the images to dockerhub
+
+docker push wzhiye/techtrends:v1.0.0
