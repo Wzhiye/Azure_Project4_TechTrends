@@ -1,4 +1,4 @@
-[![Pytest](https://github.com/Wzhiye/Azure_Project4_TechTrends/actions/workflows/pytest.yml/badge.svg)](https://github.com/Wzhiye/Azure_Project4_TechTrends/actions/workflows/pytest.yml)
+[![TechTrends - Package with Docker](https://github.com/Wzhiye/Azure_Project4_TechTrends/actions/workflows/techtrends-dockerhub.yml/badge.svg)](https://github.com/Wzhiye/Azure_Project4_TechTrends/actions/workflows/techtrends-dockerhub.yml)
 
 ## Techtrends project 
 
