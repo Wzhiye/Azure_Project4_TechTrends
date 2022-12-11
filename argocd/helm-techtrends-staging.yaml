@@ -13,6 +13,6 @@ spec:
       valueFiles:
       - values-staging.yaml 
     path: helm
-    repoURL: https://github.com/MIZ-KAS/techtrends_project
+    repoURL: https://github.com/Wzhiye/Azure_Project4_TechTrends
     targetRevision: HEAD
   syncPolicy: {}
