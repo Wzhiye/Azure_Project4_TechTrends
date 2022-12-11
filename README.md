@@ -141,11 +141,11 @@ kubectl apply -f argocd-server-nodeport.yaml
 
 `` kubectl get svc -n argocd `` again 
 
-then access the ArgoCD UI by going to https://192.168.50.4:30008 or http://192.168.50.4:30007
+then access the ArgoCD UI by going to https://192.168.50.2:30008 or http://192.168.50.2:30007
 To login to argocd 
 username: admin
 password: run command `` kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo ``
-generated password: MPxL7340G95KVVru
+generated password: P349ooXkKpHYgISc
 
 kubectl describe po -n sandbox
 
